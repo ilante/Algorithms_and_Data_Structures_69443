@@ -19,9 +19,46 @@ def merge(ar):
         q=len(ar)//2-1
     else:
         q=len(ar)//2 # BS: indexing starts at 0 math.ceil(ar/2) # Gausche aufrundungsfunktion
-    r=len(ar)
+    r=len(ar)-1
     print('p', p, 'q', q, 'r', r)
 
+    # lets check if n1 and n2 check outA
+    n_1 = q-p+1
+    n_2 = r-q
+    print('n1 is: ', n_1)
+    print('n2 is: ', n_2)
+    left = [0]*(n_1+1) # initiating zero list of lenght n1
+    right=[0]*(n_2+1)
+    print(left, len(left))
+    print(right, len(right))
+
+    # filling left and right
+    for i in range(n_1):# because last value will always be infinity
+        left[i] = ar[p+i]
+    for j in range(n_2):
+        right[j] = ar[q+j+1]
+        #print(ar[q+j+1])
+        #print(right[j])
+    # inserting infinity at last index for each subarray
+    left[n_1]=math.inf
+    right[n_2]=math.inf
+    print(left)
+    print(right)
+    # merging: initiating indeces at 0
+    i=0
+    j=0
+    print('p', p)
+    print('r', r)
+    for k in range(p,r):
+        if left[i] <= right[j]:
+            ar[k]=left[i]
+            # increase i
+            i += 1
+        else:
+            ar[k]=right[j]
+            #increase j
+            j += 1
+    print(ar)
 #############################################################################################################################
 # Adding parser
 #############################################################################################################################
