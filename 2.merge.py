@@ -23,8 +23,8 @@ def merge(ar):
     print('p', p, 'q', q, 'r', r)
 
     # lets check if n1 and n2 check outA
-    n_1 = q-p+1
-    n_2 = r-q
+    n_1 = q-p+1 # describes the lenght of the left subarray 
+    n_2 = r-q # len of right subarray
     print('n1 is: ', n_1)
     print('n2 is: ', n_2)
     left = [0]*(n_1+1) # initiating zero list of lenght n1
@@ -49,7 +49,7 @@ def merge(ar):
     j=0
     print('p', p)
     print('r', r)
-    for k in range(p,r):
+    for k in range(p,r+1):
         if left[i] <= right[j]:
             ar[k]=left[i]
             # increase i
@@ -58,6 +58,7 @@ def merge(ar):
             ar[k]=right[j]
             #increase j
             j += 1
+            print('preliminary',ar)
     print(ar)
 #############################################################################################################################
 # Adding parser
