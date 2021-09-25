@@ -46,7 +46,7 @@ A nearly complete binary tree with the two following properties;
 1. Structural property: all levels are full, except possibly the last one, which is filled from left to right.
 2. Order/heap property: for any node $i$ parent($i$) $\geq$ i.
 The maximum value appears in the root &rarr; also called Max Heaps.
-3. The height of a heap of $n$ elements is $ \lfloor log_2 n \rfloor $
+3. The height of a heap of $n$ elements is $\lfloor log_2 n \rfloor$
 </details>
 
 <details>
@@ -58,7 +58,7 @@ The number of nodes you have to pass through form a leaf for reaching the node. 
 <details>
 <summary>What is the height of a heap?</summary>
 <br>
-It is $
+It is $\lfloor log_2 n \rfloor$ 
 </details>
 
 Recording minute 13: 
@@ -82,4 +82,11 @@ For the heap the distance to the root of the longest leafs compared to the short
 A heap is almost a complete binary tree, except for the last level. The last level may be partial but has to be filled from left to right. 
 
 The last level of a heap may be incomplete just as in a full binary tree but it must be filled from left to right.
+</details>
+
+<details>
+<summary>
+What is the height of any binary tree?</summary>
+<br>
+The height is $log_2 n$. We will always consider the longest path from any leaf to the root! 
 </details>
