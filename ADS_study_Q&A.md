@@ -90,3 +90,16 @@ What is the height of any binary tree?</summary>
 <br>
 The height is $log_2 n$. We will always consider the longest path from any leaf to the root! 
 </details>
+
+<details>
+<summary>
+Why could the datastructure of the heap be useful instead of simply using an array?</summary>
+<br>
+Because in some applications we have to exctract the highest value quickly. That way you know you can always access the element of highest value in constant time!
+</details>
+
+<details>
+<summary>
+What is the problem with the heap datasturcture?</summary>
+<br>
+If you remove the root (the highest value) you have to reorder the tree, to move the second largest number to the root.
