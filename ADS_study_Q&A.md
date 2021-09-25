@@ -104,3 +104,8 @@ What is the problem with the heap datasturcture?</summary>
 <br>
 If you remove the root (the highest value) you have to reorder the tree, to move the second largest number to the root.
 </details>
+
+* During the exam she might ask: I gave you a max heap example; can you adjust the algorithm to a min-heap?
+
+<details>
+<summary>
