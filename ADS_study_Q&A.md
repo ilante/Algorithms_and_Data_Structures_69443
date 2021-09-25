@@ -103,3 +103,4 @@ Because in some applications we have to exctract the highest value quickly. That
 What is the problem with the heap datasturcture?</summary>
 <br>
 If you remove the root (the highest value) you have to reorder the tree, to move the second largest number to the root.
+</details>
