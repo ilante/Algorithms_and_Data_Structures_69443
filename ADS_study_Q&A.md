@@ -59,3 +59,23 @@ The number of nodes you have to pass through form a leaf for reaching the node. 
 It is $
 </details>
 
+Min 13: 
+
+<details>
+<summary>What is the difference between a full binary tree and a complete binary tree?</summary>
+<br>
+A full binary tree might have leafs with differeing distances to the root. Thus the tree does not look completely symmetric. 
+
+All leafs of the complete binary tree on the other hand must have the exact same distance to the root. Thus the tree is completely symmetric.
+</details>
+
+A heap is almost a complete binary tree, except for the last level. The last level may be partial but has to be filled from left to right. 
+
+<details>
+<summary>
+What is the difference between a full binary tree and a heap?</summary>
+<br>
+The distance to the root might differ between leafs. For a full binary tree the longest distance from a leaf to the root might be several levels higher than the distance from the shortest leaf.
+
+For the heap the distance to the root of the longest leafs compared to the shortest leafs can only differ by 1.
+</details>
