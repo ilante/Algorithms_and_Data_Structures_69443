@@ -109,3 +109,77 @@ If you remove the root (the highest value) you have to reorder the tree, to move
 
 <details>
 <summary>
+Describe the Max-heapify algorithm.</summary>
+<br>
+Max-Heapify(A, i) &rarr; where A is an array and i is the index<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;l = 2i<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;r = 2i + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;if l $\leq$ A.heap-size and A[l] $>$ A[i]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;largest = l<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;else largest = i<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;if r $\leq$ A.heap-size and A[r] $>$ A[largest]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;largest = r<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;if largest $\ne$ i<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exchange A[i] with A[largest]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max-Heapify(A,largest)<br/>
+Note that the value of $i$ does indeed change while the key of $i$ remains the same...
+
+The stopping condition is when we reach the leafnodes
+
+&rarr; We have 2 stopping conditions:
+
+* Either your childs value is a leaf node: (l or r) is larger than A.heap-size &rarr; not representing an element in the heap (out of range). So in the case your array is larger than the heap size. E.g. A.lengh $`\neq`$
+  * So once you hit the leaf nodes you do not call the algorithm recursively again
+* Or key of the child A[child] is smaller than largest 
+
+&rarr; Remember this algo only works with Max-Heaps, thus it works only if there was one modification to the heap such as the the value change in the any internal node or the root root to a number smaller than the children. Thus the left and right sub-trees are still max heaps.
+
+# 49:43
+</details>
+
+<details>
+<summary> What is the worst case of Max-Heapify</summary>
+<br>
+When the heap property is violated by the root while at the same time the root holds the smallest number (key) in the entire heap. Thus the entrie tree must be explored from the top to the bottom. The height of the tree is O(log n)
+</details>
+
+
+<details>
+<summary>What is the running time of Max-Heapify?</summary>
+<br>
+
+
+</details>
+
+<details>
+<summary>Why is the upper bound for MH log n?</summary>
+<br>
+Because in the worst case we have to go from the root to the leave swapping in each instance. This is identical to the height of the tree which is also $\lfloor log n \rfloor$
+* If you define the theight of the tree as $$h=O(logn)$$ you may also say the run time is $$O(h)$$
+</details>
+<br>
+
+<details>
+<summary>How to build a heap from an array?</summary>
+<br>
+* When we build a heap from an array the $Heapsize = A.length$ 
+  * Keep in mind that heaps can be modified which is why after some operations the Heapsize might be smaller than the original $A.length$
+  * The heap size is dynamic, the array size is not
+* Given an array of $n$ elements - we have to rearrange its elements in a way that satisfy the Max-Heap property
+* We have to add internal nodes left to right starting with the next highest values
+  * All left children will hold keys of indices $2i$
+  * All right children will hold keys of indices $2i+1$
+* The leaves are the elements from $A.length/2 + 1$ to the end of $A.lengh$ 
+  * We don't want to analyse the leafs
+* We start by looking only at the internal nodes $$Nodes_internal = 1 ... \lfloor A.length/2 \rfloor$$
+  * Here we treat the last intearnal nodes before the leafs as subtrees where the last internal node is the root of the subtree.
+  * Thus we want to start at the last internal nodes $\lfloor A.length \rfloor downto 1$
+</details>
+<br>
+
+<details>
+<summary>Why does the algorithm go from the bottom to the top?</summary>
+<br>
+* Because a requirement of Max-Heapify is that all my subtrees are max-heaps
+</details>
+<br>
