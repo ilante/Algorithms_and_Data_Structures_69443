@@ -311,8 +311,14 @@ A Priority Queue is a data structure for maintaining a set of *S* elements, each
 <details>
 <summary>When do we use priority queues?</summary>
 <br>
+
 * Hospitals
 * Job scheduling on a computer
-  * 
+    * A max-priority queue keeps track of the jobs to be performed 
+    * When a job is finished/interrupted;
+        * Job with the highest priority is selected adding a new job to the queue
+* Can be implemented with a max-heap
+    * Jobs in the priority queue correspond to the nodes in the heap
+  
 </details>
 <br>
