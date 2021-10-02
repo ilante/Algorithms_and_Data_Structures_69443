@@ -322,3 +322,11 @@ A Priority Queue is a data structure for maintaining a set of *S* elements, each
   
 </details>
 <br>
+
+<details>
+<summary>What is the difference between Heap-Extract-Max and Heap-sort?</summary>
+<br>
+
+* Cate?
+</details>
+<br>
