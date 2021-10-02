@@ -212,6 +212,97 @@ Ch-06 s 20
 <details>
 <summary>What is the level of a tree?</summary>
 <br>
-* 
+* Cate?
+</details>
+<br>
+
+<details>
+<summary>What is the complexity of building a Max-Heap?</summary>
+<br>
+* Its a linear time operation
+</details>
+<br>
+
+<details>
+<summary>What is the complexity of Max-Heapify?</summary>
+<br>
+* Its a $log n$ time operation
+</details>
+<br>
+
+<details>
+<summary>How can we use heaps to do sorting?</summary>
+<br>
+* We will build a Max-Heap from a given array of elements, using *Build-Max-Heap*
+* Then we exploit the *Max-Heap-property* once we have a Max-Heap
+    * We take the largest element, knowing that we'll always find it in the root
+    * Thus, we take this largest element and put it into the last position (**i**) in the array
+    * Hence we must reduce the heapsize by one
+    * Restore the Max-Heap-property and continue in the same way
+        * Thereafter we have to replace the key of the root that was moved with one of the other elements of the heap
+    * We stop when the heap-size = 1
+</details>
+<br>
+
+<details>
+<summary>How can we use heaps to do sorting (different wording)?</summary>
+<br>
+* We will build a Max-Heap from a given array of elements, using *Build-Max-Heap*
+* Then we exploit the *Max-Heap-property* once we have a Max-Heap
+* We take the largest element, knowing that we'll always find it in the root and place it in the *last position* *i* of the array
+* We 'discard' the last node by reducing the heapsize by one 
+* We cal **Max-Heapify" on the new root to mainting (restore) the *max-heap-property*
+* We have to replace the key of the root that was moved with one of the other elements of the hea
+    * We repeat the process until the heap contains only one node
+</details>
+<br>
+
+<details>
+<summary>What is the running time of Heapsort?</summary>
+<br>
+* Build-Max-Heap(A)
+    * O(n)
+* Loop is executed n times but contains Max-Heapify
+   * O(log n)
+   * The runtime for the loop is therefore O(n log n)
+ * Total runtime of the algo is O(n log n) + O(n) but as the first term is dominating the short answer is:
+
+The runtime of Heapsort is O(n log n)
+
+</details>
+<br>
+
+<details>
+<summary>Why do we not define the theta bound runtime for Heapsort?</summary>
+<br>
+* Because the built in algorithms 
+    * Build-Max-Heap
+    * Max-Heapify 
+* Cannot be defined in terms of thetha
+</details>
+<br>
+
+<details>
+<summary>What is the difference of complexity of Merge sort and Heap sort?</summary>
+<br>
+* MS: For sure n log n
+* HS: can be better than n log n
+</details>
+<br>
+
+<details>
+<summary>What a Priority-Queue?</summary>
+<br>
+A Priority Queue is a data structure for maintaining a set of *S* elements, each with an **associated priority value** called a **key**.
+</details>
+<br>
+
+<details>
+<summary>What operations are supported by Max-priority queues?</summary>
+<br>
+1. Return the element of **S** with the largest key
+2. Remove and return the element of **S** with the largest key
+3. Increase the value of an element x's key to k, assuming $k \geq key_current$ at value x
+4. Insert an element x into set **S**
 </details>
 <br>
