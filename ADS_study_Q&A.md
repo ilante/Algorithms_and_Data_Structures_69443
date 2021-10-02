@@ -180,6 +180,7 @@ Because in the worst case we have to go from the root to the leave swapping in e
 <details>
 <summary>Why does the algorithm go from the last internal node y to the top (the root)?</summary>
 <br>
+
 * First of all because the leaves are defined as $\lfloor A.length/2 \rfloor + 1 to n $ - because the leaves have no children ;)
   * The last internal node has the last children
   * The leaves are the stopping condition
@@ -192,7 +193,25 @@ Because in the worst case we have to go from the root to the leave swapping in e
 <details>
 <summary>What is cost of Max-Heapyfy on a node?</summary>
 <br>
-* It is proportional to the height of the node in the tree.
+* It is proportional to the height of the node in the tree
+* The worst case is always the height of that internal node, that is treated as a root at a given i ("rooted at a given i")
+* The closer you are to the root, the higher the cost
+* For every level i we have the cost of Max-Heapify plus the number of nodes that are present in a given level
+  
+Ch-06 s 20
 </details>
 <br>
 
+<details>
+<summary>Why h = h - i ?</summary>
+<br>
+* Cate?
+</details>
+<br>
+
+<details>
+<summary>What is the level of a tree?</summary>
+<br>
+* 
+</details>
+<br>
