@@ -300,9 +300,19 @@ A Priority Queue is a data structure for maintaining a set of *S* elements, each
 <details>
 <summary>What operations are supported by Max-priority queues?</summary>
 <br>
+
 1. Return the element of **S** with the largest key
 2. Remove and return the element of **S** with the largest key
 3. Increase the value of an element x's key to k, assuming $k \geq key_current$ at value x
 4. Insert an element x into set **S**
+</details>
+<br>
+
+<details>
+<summary>When do we use priority queues?</summary>
+<br>
+* Hospitals
+* Job scheduling on a computer
+  * 
 </details>
 <br>
