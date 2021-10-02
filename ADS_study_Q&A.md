@@ -178,8 +178,21 @@ Because in the worst case we have to go from the root to the leave swapping in e
 <br>
 
 <details>
-<summary>Why does the algorithm go from the bottom to the top?</summary>
+<summary>Why does the algorithm go from the last internal node y to the top (the root)?</summary>
 <br>
-* Because a requirement of Max-Heapify is that all my subtrees are max-heaps
+* First of all because the leaves are defined as $\lfloor A.length/2 \rfloor + 1 to n $ - because the leaves have no children ;)
+  * The last internal node has the last children
+  * The leaves are the stopping condition
+* We are working only on subtrees 
+* A requirement of Max-Heapify is that all my subtrees are max-heaps
+  * By working on subtrees of 3 nodes (1 parent 2 children) we can be sure that the violation is just in one place
 </details>
 <br>
+
+<details>
+<summary>What is cost of Max-Heapyfy on a node?</summary>
+<br>
+* It is proportional to the height of the node in the tree.
+</details>
+<br>
+
