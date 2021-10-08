@@ -1,3 +1,13 @@
+# L 1
+
+<details>
+<summary>What is a set?</summary>
+<br>
+
+*
+</details>
+
+
 # L 4 
 
 - Solving recurrence equations for runtime analysis of recursive algorithms
@@ -330,3 +340,108 @@ A Priority Queue is a data structure for maintaining a set of *S* elements, each
 * Cate?
 </details>
 <br>
+
+# 06L Ch 7 & 8
+
+
+<details>
+<summary>What is the difference between Merge sort and Quick sort?</summary>
+<br>
+
+* In Merge sort the dividing step is trivial
+    * Because we just calculated the middle index of the array, which was enough to merge sort the left and the right part
+  * The Combining step is the dificult part solved by the 'merge' algorithm, which was the main driving force of the algo
+  
+* In Quick sort the combination step is trivial
+* The main work is in the dividing step
+    * A[p..q-1] <= A[q] <= A[q+1..r]
+        * A[q] is NOT the middle of the array!
+        * Further here we are not really dividing but **partitioning**
+        * Because we find the element A[q] and then all elements to its left need to be smaller while all elements to its right need to be larger than A[q]
+</details>
+<br>
+
+<details>
+<summary>Why is the combining part of quick sort so easy?</summary>
+<br>
+
+* This is because
+    * Each element of the left subarray is by definition $\leq$ A[q]
+    * And each element of the right subarray is by definition $\geq$ A[q]
+* Thus the combination of the two subarrays will be very easy as none of the elements left or right to A[q] need to be moved anymore. They are already were they should be
+</details>
+<br>
+
+<details>
+<summary>Quicksort &rarr; Why do we initialize i = p - 1?</summary>
+<br>
+
+* Because A[p..i] contains the elements that are less than or equal to x
+* If i was defined initially as p, then there would be just ONE element that is lesser than or equal to x 
+* In order to start with an empty array we have to start with i = p -1
+</details>
+<br>
+
+<details>
+<summary>Template<summary>
+<br>
+answer
+</details>
+<br>
+
+<details>
+<summary>Pseudo code of Quicksort<summary>
+<br>
+&rarr; initial call of Quicksort takes A, 1 and A.lenght 
+```
+Quicksort(A,p,r) 
+1   if p < r
+2         q = Partition(A,p,r)
+3         Quicksort(A, p, q - 1) // left array with each el <= x
+4         Quicksort(A, q + 1, r) // right array with each el >= x
+```
+</details>
+<br>
+
+<details>
+<summary>Pseudo code of Partition?<summary>
+<br>
+```
+Partition(A, p, r)
+1 x = A[r]
+2 i = p - 1
+3 for j = p to r - 1  // first j starts at p = 1, loop ends at second last element
+4     if A[j] <= x
+5         i = i + 1
+6         exchange A[i] with A[j]   // Moves A[j] <= x to left sub array 
+7 exchange A[i + 1] with A[r]   // move x in position A[q]
+8 return i + 1    // corresponding to q, nedded as input for recursive calles of Quicksort (line 3 and 4)
+```
+<br>
+
+<details>
+<summary>Best case of Quick-sort?<summary>
+<br>
+
+* Balanced partitioning $\Theta(n log n)$
+</details>
+<br>
+
+<details>
+<summary>Worst case of Quick-sort?<summary>
+<br>
+
+* Maximally unbalanced set:
+    * One region has 0 elements and the other one has n - 1 elements
+    * When the array is already sorted
+    * When all elements are smaller than 8
+* Running time of $\Theta(n^2)$
+</details>
+<br
+
+<details>
+<summary>Best case of Quick-sort?<summary>
+<br>
+answer
+</details>
+<br
