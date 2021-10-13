@@ -1,3 +1,15 @@
+ctrl + shift + p 'Markdown all in one: print current doc to html'
+
+<details>
+<summary>Template</summary>
+
+* remember to leave an empty line after summary
+* remember to leave an empty line after answer
+* add break before end details
+
+<br>
+</details>
+
 # L 1
 
 <details>
@@ -448,7 +460,11 @@ Partition(A, p, r)
 <details>
 <summary>Best case of Quick-sort?</summary>
 
-* Balanced partitioning $\Theta(n log n)$ (same as merge sort)
+* Balanced partitioning, meaning that we will have 2 regions
+    * One of size n/2
+    * The other one of size n/2-1
+* The recurrence is calcuated as follows:
+* $T(n) = 2T(n/2)+\Theta(n)=\Theta(n log n)$ (same as merge sort)
 
 <br>
 </details>
@@ -461,6 +477,19 @@ Partition(A, p, r)
     * When the array is already sorted
     * When all elements are smaller than 8
 * Running time of $\Theta(n^2)$
+
+<br>
+</details>
+
+<details>
+<summary>Average case of Quicksort</summary>
+
+* All permutations of the input numbers are equally likely
+* On a random input array, we will have a **mix** of well balanced and unbalanced splits
+    * Because it is unrealistic that each split happenes in the same way
+* Good and bad splits are randomly distributed throughout the tree
+    * E.g. $(n-1)/2-1$ on one branch and $(n-1)/2$ on another branch
+* This leads to the average case running time still being $\Theta(n log n)$ which is close to the best case running time!
 
 <br>
 </details>
@@ -493,25 +522,46 @@ Partition(A, p, r)
 
 <details>
 <summary>What does the theorem say about running time of comparison based sort algos?</summary>
-<br>
 
 * Any comparison based sort algorithm requires $\Omega(n log n)$ comparisons in the **worst case**
 * We can proof that by constructing a tree and check how many leaves *l* it has:
-    * The tree will have $n!$ permutations of the input appearing as some leaf $\Rightarrow n! \leq l$
-    * The tree will have at most $h^h$ leaves
-    * $\Rightarrow n! \leq l \leq 2^h$
-    * $\Rightarrow h \geq lg(n!) = \Omega(nlgn)$
-    * *h* is the height of the tree
+ * The tree will have at least $n!$ leaves &rarr;  $n!$ permutations of the input appearing as some leaf $\Rightarrow n! \leq l$
+ * The tree will have at most $h^h$ leaves
+ * $\Rightarrow n! \leq l \leq 2^h$
+ * $\Rightarrow h \geq lg(n!) = \Omega(nlgn)$
+ * *h* is the height of the tree
 
-</details>
 <br>
+</details>
+
+#### Comparison of Sorting Algorithms
+
+
+<details>
+<summary>Running time of insertion sort?</summary>
+
+* Worst case: $\Theta(n log n)$ 
+* Best case: $\Theta(n log n)$ 
+* Best and worst are the **same**
+* But it does **not**
+
+* Sorts in place
+
+<br>
+</details>
+
+<summary>Running time of merge sort?</summary>
+
+* Worst case: $\Theta(n^2)$ 
+* Best case: $\Theta(n)$
+
+<br>
+</details>
 
 <details>
 <summary>Template</summary>
 
-* remember to leave an empty line after summary
-* remember to leave an empty line after answer
-* add break before end details
+* 
 
 <br>
 </details>
