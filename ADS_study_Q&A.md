@@ -4,8 +4,15 @@
 <summary>What is a set?</summary>
 <br>
 
-*
+* Each element can occur only once
+* The elements are not ordered
+* The number of elements in a set S is the cardinality of the set $(|S|)$
+    * If the cardinality if a natural number, then the S is a finite set 
+    * Otherwise it is infinite
+
 </details>
+
+
 
 
 # L 4 
@@ -163,15 +170,16 @@ When the heap property is violated by the root while at the same time the root h
 
 <details>
 <summary>Why is the upper bound for MH log n?</summary>
+
+* Because in the worst case we have to go from the root to the leave swapping in each instance. This is identical to the height of the tree which is also $\lfloor log n \rfloor$
+* If you define the theight of the tree as $h=O(logn)$ you may also say the run time is $O(h)$
+
 <br>
-Because in the worst case we have to go from the root to the leave swapping in each instance. This is identical to the height of the tree which is also $\lfloor log n \rfloor$
-* If you define the theight of the tree as $$h=O(logn)$$ you may also say the run time is $$O(h)$$
 </details>
-<br>
 
 <details>
 <summary>How to build a heap from an array?</summary>
-<br>
+
 * When we build a heap from an array the $Heapsize = A.length$ 
   * Keep in mind that heaps can be modified which is why after some operations the Heapsize might be smaller than the original $A.length$
   * The heap size is dynamic, the array size is not
@@ -184,12 +192,12 @@ Because in the worst case we have to go from the root to the leave swapping in e
 * We start by looking only at the internal nodes $$Nodes_internal = 1 ... \lfloor A.length/2 \rfloor$$
   * Here we treat the last intearnal nodes before the leafs as subtrees where the last internal node is the root of the subtree.
   * Thus we want to start at the last internal nodes $\lfloor A.length \rfloor downto 1$
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>Why does the algorithm go from the last internal node y to the top (the root)?</summary>
-<br>
 
 * First of all because the leaves are defined as $\lfloor A.length/2 \rfloor + 1 to n $ - because the leaves have no children ;)
   * The last internal node has the last children
@@ -197,52 +205,58 @@ Because in the worst case we have to go from the root to the leave swapping in e
 * We are working only on subtrees 
 * A requirement of Max-Heapify is that all my subtrees are max-heaps
   * By working on subtrees of 3 nodes (1 parent 2 children) we can be sure that the violation is just in one place
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>What is cost of Max-Heapyfy on a node?</summary>
-<br>
+
 * It is proportional to the height of the node in the tree
 * The worst case is always the height of that internal node, that is treated as a root at a given i ("rooted at a given i")
 * The closer you are to the root, the higher the cost
 * For every level i we have the cost of Max-Heapify plus the number of nodes that are present in a given level
   
 Ch-06 s 20
-</details>
+
+
 <br>
+</details>
 
 <details>
 <summary>Why h = h - i ?</summary>
-<br>
+
 * Cate?
-</details>
 <br>
+</details>
 
 <details>
 <summary>What is the level of a tree?</summary>
-<br>
+
 * Cate?
-</details>
+ 
 <br>
+</details>
 
 <details>
 <summary>What is the complexity of building a Max-Heap?</summary>
-<br>
+
 * Its a linear time operation
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>What is the complexity of Max-Heapify?</summary>
-<br>
+
 * Its a $log n$ time operation
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>How can we use heaps to do sorting?</summary>
-<br>
+
 * We will build a Max-Heap from a given array of elements, using *Build-Max-Heap*
 * Then we exploit the *Max-Heap-property* once we have a Max-Heap
     * We take the largest element, knowing that we'll always find it in the root
@@ -251,12 +265,13 @@ Ch-06 s 20
     * Restore the Max-Heap-property and continue in the same way
         * Thereafter we have to replace the key of the root that was moved with one of the other elements of the heap
     * We stop when the heap-size = 1
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>How can we use heaps to do sorting (different wording)?</summary>
-<br>
+
 * We will build a Max-Heap from a given array of elements, using *Build-Max-Heap*
 * Then we exploit the *Max-Heap-property* once we have a Max-Heap
 * We take the largest element, knowing that we'll always find it in the root and place it in the *last position* *i* of the array
@@ -264,12 +279,13 @@ Ch-06 s 20
 * We cal **Max-Heapify" on the new root to mainting (restore) the *max-heap-property*
 * We have to replace the key of the root that was moved with one of the other elements of the hea
     * We repeat the process until the heap contains only one node
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>What is the running time of Heapsort?</summary>
-<br>
+
 * Build-Max-Heap(A)
     * O(n)
 * Loop is executed n times but contains Max-Heapify
@@ -279,48 +295,49 @@ Ch-06 s 20
 
 The runtime of Heapsort is O(n log n)
 
-</details>
 <br>
+</details>
 
 <details>
 <summary>Why do we not define the theta bound runtime for Heapsort?</summary>
-<br>
+
 * Because the built in algorithms 
     * Build-Max-Heap
     * Max-Heapify 
 * Cannot be defined in terms of thetha
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>What is the difference of complexity of Merge sort and Heap sort?</summary>
-<br>
+
 * MS: For sure n log n
 * HS: can be better than n log n
-</details>
 <br>
+</details>
 
 <details>
 <summary>What a Priority-Queue?</summary>
-<br>
+
 A Priority Queue is a data structure for maintaining a set of *S* elements, each with an **associated priority value** called a **key**.
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>What operations are supported by Max-priority queues?</summary>
-<br>
 
 1. Return the element of **S** with the largest key
 2. Remove and return the element of **S** with the largest key
 3. Increase the value of an element x's key to k, assuming $k \geq key_current$ at value x
 4. Insert an element x into set **S**
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>When do we use priority queues?</summary>
-<br>
 
 * Hospitals
 * Job scheduling on a computer
@@ -330,23 +347,22 @@ A Priority Queue is a data structure for maintaining a set of *S* elements, each
 * Can be implemented with a max-heap
     * Jobs in the priority queue correspond to the nodes in the heap
   
-</details>
 <br>
+</details>
 
 <details>
 <summary>What is the difference between Heap-Extract-Max and Heap-sort?</summary>
-<br>
 
 * Cate?
+
+<br>
 </details>
 <br>
 
 # 06L Ch 7 & 8
 
-
 <details>
 <summary>What is the difference between Merge sort and Quick sort?</summary>
-<br>
 
 * In Merge sort the dividing step is trivial
     * Because we just calculated the middle index of the array, which was enough to merge sort the left and the right part
@@ -358,41 +374,48 @@ A Priority Queue is a data structure for maintaining a set of *S* elements, each
         * A[q] is NOT the middle of the array!
         * Further here we are not really dividing but **partitioning**
         * Because we find the element A[q] and then all elements to its left need to be smaller while all elements to its right need to be larger than A[q]
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>Why is the combining part of quick sort so easy?</summary>
-<br>
 
 * This is because
     * Each element of the left subarray is by definition $\leq$ A[q]
     * And each element of the right subarray is by definition $\geq$ A[q]
 * Thus the combination of the two subarrays will be very easy as none of the elements left or right to A[q] need to be moved anymore. They are already were they should be
-</details>
+
 <br>
+</details>
 
 <details>
 <summary>Quicksort &rarr; Why do we initialize i = p - 1?</summary>
-<br>
 
 * Because A[p..i] contains the elements that are less than or equal to x
 * If i was defined initially as p, then there would be just ONE element that is lesser than or equal to x 
 * In order to start with an empty array we have to start with i = p -1
-</details>
+ 
 <br>
+</details>
 
 <details>
-<summary>Template<summary>
+<summary>What is a set?</summary>
+
+* Each element can occur only once
+* The elements are not ordered
+* The number of elements in a set S is the cardinality of the set $(|S|)$
+    * If the cardinality if a natural number, then the S is a finite set 
+    * Otherwise it is infinite
+
 <br>
-answer
 </details>
-<br>
 
 <details>
-<summary>Pseudo code of Quicksort<summary>
-<br>
-&rarr; initial call of Quicksort takes A, 1 and A.lenght 
+<summary>Pseudo code of Quicksort</summary>
+
+&rarr; initial call of Quicksort takes A, 1 and A.lenght
+
 ```
 Quicksort(A,p,r) 
 1   if p < r
@@ -400,12 +423,13 @@ Quicksort(A,p,r)
 3         Quicksort(A, p, q - 1) // left array with each el <= x
 4         Quicksort(A, q + 1, r) // right array with each el >= x
 ```
-</details>
+
 <br>
+</details>
 
 <details>
-<summary>Pseudo code of Partition?<summary>
-<br>
+<summary>Pseudo code of Partition?</summary>
+
 ```
 Partition(A, p, r)
 1 x = A[r]
@@ -417,31 +441,77 @@ Partition(A, p, r)
 7 exchange A[i + 1] with A[r]   // move x in position A[q]
 8 return i + 1    // corresponding to q, nedded as input for recursive calles of Quicksort (line 3 and 4)
 ```
-<br>
 
-<details>
-<summary>Best case of Quick-sort?<summary>
 <br>
-
-* Balanced partitioning $\Theta(n log n)$
 </details>
-<br>
 
 <details>
-<summary>Worst case of Quick-sort?<summary>
+<summary>Best case of Quick-sort?</summary>
+
+* Balanced partitioning $\Theta(n log n)$ (same as merge sort)
+
 <br>
+</details>
+
+<details>
+<summary>Worst case of Quick-sort?</summary>
 
 * Maximally unbalanced set:
     * One region has 0 elements and the other one has n - 1 elements
     * When the array is already sorted
     * When all elements are smaller than 8
 * Running time of $\Theta(n^2)$
+
+<br>
 </details>
-<br
 
 <details>
-<summary>Best case of Quick-sort?<summary>
+<summary> Quick sort explained by GeeksforGeeks:</summary>
+
+* Sortingalgo using the idea of divide and conquer
+* Finds element that is called **pivot** which divided the array in two
+* The left part of the array holds elements smaller or equal than **pivot** (x)
+* The right holds elements strictly larger than the **pivot**
+  
+* We recursively perform three steps
+    
+1. Bring the pivot to its apropriate position such that left of the pivot is smaller and right is greater
+2. Quick sort the left part
+3. Quick sort the right part
+  
+* The counter variables are 
+* *i* index of the smaller el
+* j loop variable
+* Test condition:
+    * arr[j] <= pivot
+    * if true
+        * Swap(arr(i), arr(j))
+    * else next iteration of for
+
 <br>
-answer
 </details>
-<br
+
+<details>
+<summary>What does the theorem say about running time of comparison based sort algos?</summary>
+<br>
+
+* Any comparison based sort algorithm requires $\Omega(n log n)$ comparisons in the **worst case**
+* We can proof that by constructing a tree and check how many leaves *l* it has:
+    * The tree will have $n!$ permutations of the input appearing as some leaf $\Rightarrow n! \leq l$
+    * The tree will have at most $h^h$ leaves
+    * $\Rightarrow n! \leq l \leq 2^h$
+    * $\Rightarrow h \geq lg(n!) = \Omega(nlgn)$
+    * *h* is the height of the tree
+
+</details>
+<br>
+
+<details>
+<summary>Template</summary>
+
+* remember to leave an empty line after summary
+* remember to leave an empty line after answer
+* add break before end details
+
+<br>
+</details>
