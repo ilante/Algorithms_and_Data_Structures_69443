@@ -534,26 +534,73 @@ Partition(A, p, r)
 <br>
 </details>
 
-#### Comparison of Sorting Algorithms
 
+#### Comparison of Sorting Algorithms
 
 <details>
 <summary>Running time of insertion sort?</summary>
 
-* Worst case: $\Theta(n log n)$ 
-* Best case: $\Theta(n log n)$ 
-* Best and worst are the **same**
-* But it does **not**
-
-* Sorts in place
+* Worst case: $\Theta(n^2)$ 
+* Best case: $\Theta(n)$
+* Sorts **in place**
 
 <br>
 </details>
 
+<details>
 <summary>Running time of merge sort?</summary>
 
+* Worst case: $\Theta(n log n)$ 
+* Best case: $\Theta(n log n)$ 
+* Best and worst are the **same**
+* But it does **not** sort in place
+  * It creates additional arrays that require additional space 
+
+<br>
+</details>
+
+<details>
+<summary>Running time of heap sort?</summary>
+
+* Worst case: $\Theta(n log n)$ 
+* Best case: $\Theta(n log n)$ 
+* Sorts **in place**
+
+<br>
+</details>
+
+<details>
+<summary>Running time of quick sort?</summary>
+
 * Worst case: $\Theta(n^2)$ 
-* Best case: $\Theta(n)$
+* Best case: $\Theta(n log n)$ 
+* Sorts **in place**
+
+<br>
+</details>
+
+<details>
+<summary>Which of the previously mentioned sorting algo(s) are sorting in place?</summary>
+
+1. Insertion sort
+2. Heap sort
+3. Quick sort 
+
+<br>
+</details>
+
+<details>
+<summary>Which sorting algo(s) does **not** sort in place?</summary>
+
+*  Merge sort
+
+<br>
+</details>
+
+<details>
+<summary>Which algo has the fastest best-case?</summary>
+
+* Insertion sort: $\Thetha(n)$  
 
 <br>
 </details>
