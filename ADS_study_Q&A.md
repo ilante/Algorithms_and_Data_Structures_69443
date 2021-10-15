@@ -10,6 +10,45 @@ ctrl + shift + p 'Markdown all in one: print current doc to html'
 <br>
 </details>
 
+# L 0 Mathematical Background
+
+<details>
+<summary>Infinite series?</summary>
+
+$\sum_{k=1}^{\infty} a_k$, &emsp; wich we interpret to mean &emsp; $\lim_{n \to \infty} \sum_{k=1}^{n} a_k$
+
+* If the limit exists the series *converges*
+* The terms of a convergent series **cannot** always be added in any order
+
+<br>
+</details>
+
+<details>
+<summary>Linearity</summary>
+
+For any real number *c* and any finite series $a_1, a_2,...,a_n$ and $b_1, b_2,...,b_n$ we have; $$\sum_{k=1}^{n}(ca_k+b_k) = c \sum_{k=1}^{n} a_k + \sum_{k=1}^{n} b_k$$
+
+* This liniarity property also applies to infinite series
+* We can make use of the linearity property to manipulate summations incorporating the asymptotic notation; e.g.
+
+* $\sum_{k=1}^{n} \Theta(f(k)) = \Theta(\sum_{k=1}^{n}f(k))$
+  * Here the left side $\Theta$ notation applies to *k*
+  * The right side $\Theta$ applies to *n*
+
+<br>
+</details>
+
+<details>
+<summary>The value of the arithmetic series 
+
+$\sum_{k=1}^{n} k = 1 + 2 + ... + n$ ?
+
+</summary>
+
+* \sum_{k=1}^{n}
+
+<br>
+</details>
 # L 1
 
 <details>
@@ -25,7 +64,16 @@ ctrl + shift + p 'Markdown all in one: print current doc to html'
 </details>
 
 
+# L 3 Sorting Algos and Growth of Functions
 
+<details>
+<summary>What is the big O notation for?</summary>
+
+* It is the formal mathematical way to express the **upper bound** of the running time &rarr; to describe the worst case
+* Measures the **worst case** time complexity of the longest amount of time an algorithm can possibly take to complete
+
+<br>
+</details>
 
 # L 4 
 
