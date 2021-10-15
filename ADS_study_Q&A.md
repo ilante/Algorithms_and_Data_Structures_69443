@@ -58,7 +58,7 @@ There exist positive constants $c_1, c_2$ and $n_0$ such that $0 \leq c_1 g(n) \
 
 for all $n \geq n_0$
 
-![Thetha](https://www.qwant.com/?client=brz-brave&t=images&q=f%28n%29%3D%5CTheta%28g%28n%29%29&o=0%3AF104D6854C55D841D520386258B6A4228011EB45)
+![Thetha](https://kb.novaordis.com/images/6/6d/Theta_Notation.png)
 
 <br>
 </details>
