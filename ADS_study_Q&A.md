@@ -106,6 +106,40 @@ Because we assume that $0^0 = 1$, These formulas apply even when $x=0$
 <br>
 </details>
 
+<details>
+<summary>Harmonic series</summary>
+
+* For $n > 0$, the $n^th$ harmonic number is:
+* $H_n = \frac{1}{1}, \frac{1}{2}, \frac{1}{3}, ..., \frac{1}{n}$ 
+* $\sum_{k=1}^{n}$
+* $ln(n) + O(1)$ - where big O is the upper bound
+
+
+<br>
+</details>
+
+
+<details>
+<summary>Sum of log k?</summary>
+
+* $\sum_{k=1}^{n} log k \approx n log n$ 
+
+<br>
+</details>
+
+
+<details>
+<summary> What is the value of:
+
+$\sum_{k=1}^{n} k^p$ 
+
+</summary>
+
+* $= 1^p+ 2^p + ... + n^p \approx \frac{1}{p+1} n^{p+1}$
+
+<br>
+</details>
+
 # L 1
 
 <details>
