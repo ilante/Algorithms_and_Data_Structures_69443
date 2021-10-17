@@ -140,6 +140,8 @@ $\sum_{k=1}^{n} k^p$
 <br>
 </details>
 
+<br>
+
 # L 1
 
 <details>
@@ -154,6 +156,70 @@ $\sum_{k=1}^{n} k^p$
 
 </details>
 
+<details>
+<summary>Definition of a tree</summary>
+
+* A tree is a set of **nodes** connected by **edges** so that there is **exactly one** way to get from **any** node to **any other** node 
+
+<br>
+</details>
+
+<details>
+<summary>Properties of a tree</summary>
+
+* Every non-empty tree with n nodes has **exactly** $n-1$ edges
+* A tree is rooted if one of its nodes is distinguished as **root**.
+  * This definition cas be used recursively; A **rooted tree** consists of a **root node** and a finite set of **sub-trees** which are themselves rooted trees
+  
+<br>
+</details>
+
+<details>
+<summary>Definition of a binary tree</summary>
+
+* A binary tree is an **ordered tree** which is either
+  * Empty
+  * or consists of a **root node** and two subtrees, that are themselves binary trees
+
+Here a full binary tree as an example:
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Full_binary.svg/1600px-Full_binary.svg.png)
+
+<br>
+</details>
+
+<details>
+<summary>Definition of running time of an algorithm on a particular input</summary>
+
+* The number of **primitive operations** (steps) executed 
+* It depends on the input and usually grows with input size
+
+<br>
+</details>
+
+<details>
+<summary>Definition of <b><i>order of growth</b></i></summary>
+
+* Gives a simple characterization of the algorithms **efficiency**
+
+<br>
+</details>
+
+<details>
+<summary>What does the 
+
+$\Theta$ notation describe?
+
+</summary>
+
+* Describes the "equality" 
+* $f(n)=g(g)$
+  
+<br>
+</details
+
+<br>
+
 
 # L 3 Sorting Algos and Growth of Functions
 
@@ -165,6 +231,7 @@ $\sum_{k=1}^{n} k^p$
 
 <br>
 </details>
+<br>
 
 # L 4 
 
@@ -175,6 +242,8 @@ $\sum_{k=1}^{n} k^p$
 <br>
 By a recurrence equation that describes a function in terms of its value on smaller input.
 </details>
+
+<br>
 
 # L 5
 
