@@ -39,9 +39,9 @@ For any real number *c* and any finite series $a_1, a_2,...,a_n$ and $b_1, b_2,.
 </details>
 
 <details>
-<summary>The value of the arithmetic series 
+<summary>What is value of the following arithmetic series?
 
-$\sum_{k=1}^{n} k = 1 + 2 + ... + n$ ?
+$\sum_{k=1}^{n} k = 1 + 2 + ... + n$ 
 
 </summary>
 
@@ -59,6 +59,49 @@ There exist positive constants $c_1, c_2$ and $n_0$ such that $0 \leq c_1 g(n) \
 for all $n \geq n_0$
 
 ![Thetha](https://kb.novaordis.com/images/6/6d/Theta_Notation.png)
+
+<br>
+</details>
+
+<details>
+<summary>Sum of squares?</summary>
+<br>
+
+$\sum_{k=0}^{n}k^2 = \frac{n(n+1)(2n+1)}{6}$
+
+<br>
+</details>
+
+<details>
+<summary>Sum of cubes?</summary>
+<br>
+
+$$
+\sum_{k=0}^{n}k^3 = \frac{n^2(n+1)^2}{4}
+$$
+
+<br>
+</details>
+
+<details>
+<summary>Geometric or exponential series?</summary>
+
+For real $x \neq 1,$ the sumation
+$$\sum_{k=0}^{n} x^k = 1+x+x^2+ ... + x^n$$
+
+is a geometric series or an exponential series and has the value
+$\sum_{k=0}^{n} x^k = \frac{1}{1-x}$
+
+<br>
+</details>
+
+<details>
+<summary>Geometric or exponential series with an infinite sum and 
+
+$|x| \leq 1$ ?</summary>
+
+$$\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}$$
+Because we assume that $0^0 = 1$, These formulas apply even when $x=0$
 
 <br>
 </details>
