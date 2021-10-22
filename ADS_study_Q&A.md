@@ -224,14 +224,52 @@ $\Theta$ notation describe?
 # L 3 Sorting Algos and Growth of Functions
 
 <details>
-<summary>What is the big O notation for?</summary>
+<summary>What is the big <i>O</i>-notation for?</summary>
 
-* It is the formal mathematical way to express the **upper bound** of the running time &rarr; to describe the worst case
+* It is the formal mathematical way to express the **upper bound** of the running time &rarr; to describe the **worst case**
 * Measures the **worst case** time complexity of the longest amount of time an algorithm can possibly take to complete
+* $O(g(n)) = \{f(n)$ : there exist positive constants $c$ and $n_o$ such that $0 \leq f(n) \leq cg(n) for\ all\ n \geq n_0\}$
+
+<img src="https://s2.qwant.com/thumbr/474x472/e/4/57cfed11b3f840151c91c0bb1f00cc402a951cbed81a39384468c619a775e2/th.jpg?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.oNQte90XxqslB0Z72VnujAHaHY%26pid%3DApi&q=0&b=1&p=0&a=0" width="200" height="200">
 
 <br>
 </details>
+
+<details>
+<summary>What is the &Omega; notation for?</summary>
+
+* It is the formal mathematical way to express the **best case** &rarr; asymptotic **lower bound** of the running time &rarr; 
+* It is pronounced like "**oh my god**" - which is why you can tell that we are talking about the best case
+* Sometimes also referred to as "big-&Omega;"
+* Measures the **best case** time complexity of the minimum amount of time an algorithm can possibly take to complete
+
+<img src="https://s2.qwant.com/thumbr/474x494/4/b/1012382d29d3188074c2a65d24e3541306b058915b3e24a34ab68196b72b2a/th.jpg?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.0VlgVBjisdqZGs2Cf1SZtAHaHu%26pid%3DApi&q=0&b=1&p=0&a=0" width="200" height="200">
 <br>
+</details>
+
+
+<details>
+<summary>What is the &Theta;-notation for? </summary>
+
+* When using the &Theta;-notation, we're saying that we have an asymptotically tight bound on the running time
+  * 'Asymptotically', because it matters only for **large values of n**
+  * 'Tight bound', because the running time is set between a constant factor above and
+* The &Theta;-notation can also be called "sandwich-notation" 
+* Because; 
+* $\Theta(g(n)) = \{f(n)|$ there exist positive constants $n_0 \geq 0$, $c_1$ and $c_2$ such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \forall n \geq n_o\}$
+* Simply put; 
+  * For any value (to the right of) larger than $n_0$, the value of $f(n)$ lies 
+    * **At or above** $c_1g(n)$
+    * And **at or below** $c_2g(n)$ see sandwich below
+
+<img src="https://1.bp.blogspot.com/-sOrn-Gb-TtU/XPhqa31EyHI/AAAAAAAABy0/GOTyvRcbKQAe4F2zY6VqDl60gt-9AM1ogCLcBGAs/s400/BigTheta.png" width='200' height='200'>
+
+* $Theta(g(n)) is the set of functions whose $growth = g(n)$
+* Measured with respect to the constant multiples $c_1$ and $c_2$ as *n* &rarr; $\infty$
+<br>
+</details>
+
+
 
 # L 4 
 
