@@ -20,6 +20,13 @@ I can follow her for the fist 2 terms, but what is the deal with the last 4 term
 
 * Also should the basecase not be n=1 &rarr; problemsize 1?
 
+<details>
+<summary> @Fede; &Theta;(n^2) example; Why is c_2 1/2? </summary>
+
+Why is $1/2𝑛^2−3𝑛=\Theta(𝑛^2)$?
+[see here](https://cs.stackexchange.com/questions/98669/why-is-dfrac12n2-3n-thetan2)
+
+</details>
 
 <details>
 <summary>Template</summary>
@@ -166,6 +173,20 @@ $\sum_{k=1}^{n} k^p$
 # L 1
 
 <details>
+<summary>What is a tree?</summary>
+<br>
+
+* A set of **nodes** connected by **edges**, so that there is **exaclty one** way to get from any node to any other node. 
+
+</details>
+
+<details><summary>What is the fundamental property of a non-empty tree?</summary>
+
+* Every non-empty tree with $n$ nodes has **exactly** $n-1$ edges.
+
+</details>
+
+<details>
 <summary>What is a set?</summary>
 <br>
 
@@ -223,22 +244,76 @@ Here a full binary tree as an example:
 
 * Gives a simple characterization of the algorithms **efficiency**
 
-<br>
 </details>
 
 <details>
-<summary>What does the 
+<summary>What is asymptotic behaviour?</summary>
 
-$\Theta$ notation describe?
+* We are analyzing the **asymptotic behaviour** of algorithms
+* Describes how the running time increases as the **size of the input** increases
+* asymptotic behaviour can be described by certain asymptotic notations
+ 
+</details>
 
-</summary>
+<details>
+<summary>What does the &Theta; notation describe?</summary>
 
 * Describes the "equality" 
 * $f(n)=g(g)$
   
 <br>
-</details
+</details>
 
+<details>
+<summary>&Theta;</summary>
+
+* Indicates equality:
+* $f(n)=g(n)$
+  
+</details>
+
+<details>
+<summary>big O</summary>
+
+* 'less than or equal to'
+* $f(n) \leq g(n)$
+  
+</details>
+
+<details>
+<summary>&Omega;</summary>
+
+* 'greater than or equal to'
+* $f(n) \geq g(n)$
+  
+</details>
+
+<details>
+<summary>little o</summary>
+
+* 'strictly less than'
+* $f(n)<(n)$
+
+</details>
+
+<details>
+<summary>&omega;</summary>
+
+* 'strictly greater than'
+* $f(n)>g(n)$
+  
+</details>
+
+<details>
+<summary>Video of the merge sort algorithm</summary>
+
+* It is a sorting algorithm that follows the divide and conquer approach
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mB5HXBb_HY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
+
+<br>
 <br>
 
 
@@ -250,6 +325,8 @@ $\Theta$ notation describe?
 * It is the formal mathematical way to express the **upper bound** of the running time &rarr; to describe the **worst case**
 * Measures the **worst case** time complexity of the longest amount of time an algorithm can possibly take to complete
 * $O(g(n)) = \{f(n)$ : there exist positive constants $c$ and $n_o$ such that $0 \leq f(n) \leq cg(n) for\ all\ n \geq n_0\}$
+* By using the $O$-notation to bound the worst case of an algorithm, we have an upper bound $\implies$ we have a bound on the running time on every input.
+* The worst case is often similar or the same as the average case
 
 <img src="https://s2.qwant.com/thumbr/474x472/e/4/57cfed11b3f840151c91c0bb1f00cc402a951cbed81a39384468c619a775e2/th.jpg?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.oNQte90XxqslB0Z72VnujAHaHY%26pid%3DApi&q=0&b=1&p=0&a=0" width="200" height="200">
 
@@ -274,14 +351,15 @@ $\Theta$ notation describe?
 
 * When using the &Theta;-notation, we're saying that we have an asymptotically tight bound on the running time
   * 'Asymptotically', because it matters only for **large values of n**
-  * 'Tight bound', because the running time is set between a constant factor above and
-* The &Theta;-notation can also be called "sandwich-notation" 
-* Because; 
+  * 'Tight bound', because the running time of $f(n)$ is bounded by the function $g(n)$ that is multiplied by a constant factor $c_1$ for the lower bound and $c_2$ for the upper bound
+  * Thus $g(n)$ is an asymptotic tight bound for $f(n)$
+* The &Theta;-notation can also be called "sandwich-notation" **because**; 
 * $\Theta(g(n)) = \{f(n)|$ there exist positive constants $n_0 \geq 0$, $c_1$ and $c_2$ such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \forall n \geq n_o\}$
 * Simply put; 
   * For any value (to the right of) larger than $n_0$, the value of $f(n)$ lies 
     * **At or above** $c_1g(n)$
     * And **at or below** $c_2g(n)$ see sandwich below
+* $f(n) \in \Theta g(n)$ which we will simply express as $f(n) = \Theta g(n)$ for mathematical convenience
 
 <img src="https://1.bp.blogspot.com/-sOrn-Gb-TtU/XPhqa31EyHI/AAAAAAAABy0/GOTyvRcbKQAe4F2zY6VqDl60gt-9AM1ogCLcBGAs/s400/BigTheta.png" width='200' height='200'>
 
