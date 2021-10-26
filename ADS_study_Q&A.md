@@ -2,11 +2,23 @@ ctrl + shift + p 'Markdown all in one: print current doc to html'
 
 # -1 Questions
 
-Iteration method: I don't get the example  
-$$T(n) = T(n-1)+n^4$$
+Iteration method: I don't get the example of 
+$T(n) = T(n-1)+n^4$
 Check out the video (it will start exacly at this example)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MOAVDta-0as?start=740" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+So were she said we wil take the n titration for $T(0)$;
+
+1. Why does she pick input size of 0? How does that even make sense
+2. Why does she talk about the big O notation when the input of 0 should clearly be the best case scenario?
+3. How does she get to the series?
+
+$T(n-n)+(n-(n-1))^4+...(n-3)^4+(n-2)^4+(n-1)^4+n^4$
+
+I can follow her for the fist 2 terms, but what is the deal with the last 4 terms. I don't see how this is supposed to be a simplification if we just have the same terms in the end as previously.
+
+* Also should the basecase not be n=1 &rarr; problemsize 1?
 
 
 <details>
