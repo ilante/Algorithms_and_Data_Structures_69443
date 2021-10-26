@@ -1,5 +1,13 @@
 ctrl + shift + p 'Markdown all in one: print current doc to html'
 
+# -1 Questions
+
+Iteration method: I don't get the example  
+$$T(n) = T(n-1)+n^4$$
+Check out the video (it will start exacly at this example)
+
+<iframe width="948" height="533" src="https://www.youtube.com/embed/MOAVDta-0as" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <details>
 <summary>Template</summary>
 
