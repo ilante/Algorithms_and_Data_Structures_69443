@@ -305,6 +305,22 @@ Here a full binary tree as an example:
 </details>
 
 <details>
+<summary>Merge algorithm and video:</summary>
+
+* Given two sorted decks of cards; "Left" and "Right"
+* Both "Left" and "Right" are stacked up on the table facing up 
+* Both stacks are sorted from highest to lowest with the lowest being exposed and on top of the stack
+* The third stack is "Output" and it is empty to start with
+* If $Left(i) \leq Right(j)$ we move the element to the output stack
+* Wheneve we copy the item to the output stack we have to increase the index of L or R and we also have to increment the index of the output stack
+Merge
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6pV2IF0fgKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
+
+<details>
 <summary>Video of the merge sort algorithm</summary>
 
 * It is a sorting algorithm that follows the divide and conquer approach
