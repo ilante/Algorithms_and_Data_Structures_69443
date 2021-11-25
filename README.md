@@ -4,4 +4,4 @@
 
 * I also implemented some of the algorithms from class implemented in python
 
-* [Pseudo codes collected](https://hackmd.io/@ila/H1uml-6uY)
+* [Pseudo codes collected](https://hackmd.io/@ila/HyVFPBpuF)
