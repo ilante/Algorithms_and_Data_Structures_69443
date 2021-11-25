@@ -1,4 +1,4 @@
-# Pseudos
+# Pseudo Codes
 
 # String matching
 
