@@ -12,3 +12,7 @@ var s = "JavaScript syntax highlighting";
 alert(s);
 ```
 
+```java=
+java code exemple:
+int i = 5
+```java=
